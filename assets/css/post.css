@@ -5,23 +5,9 @@ note: we can override to this global styling
 */
 
 /*========== Here import our global font ================= */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("./index.css");
 
-/*============= My Variables ================ */
-:root {
-  --navBarColor: #1c262f;
-  --udacityColor: #02b3e4;
-  --cardColor: rgb(245, 245, 245);
-}
-/*========================= Global Configurations ==============================*/
-* {
-  list-style: none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-}
+
 /*================ Start of the Body =================*/
 
 .container {
