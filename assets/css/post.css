@@ -1,0 +1,179 @@
+/* ============ First we have to add some configuration for all styling   ============ */
+/*
+If we use star (*) to select that  mean we're selecting all the elements to add this styling
+note: we can override to this global styling
+*/
+
+/*========== Here import our global font ================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+/*============= My Variables ================ */
+:root {
+  --navBarColor: #1c262f;
+  --udacityColor: #02b3e4;
+  --cardColor: rgb(245, 245, 245);
+}
+/*========================= Global Configurations ==============================*/
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+/*================ Start of the Body =================*/
+
+.container {
+  display: grid;
+  grid:
+    "back title search"
+    "blogBody blogBody sideBar"
+    "footer footer footer";
+
+  width: 100%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  text-align: center;
+  justify-items: center;
+
+}
+
+.back {
+  grid-area: back;
+  color: blue;
+  cursor: pointer;
+}
+.title {
+  color: crimson;
+  grid-area: title;
+}
+
+.search {
+  grid-area: search;
+}
+
+.blogBody {
+  width: 100%;
+  grid-area: blogBody;
+}
+
+.sideBar {
+  width: 100%;
+  grid-area: sideBar;
+}
+
+.rectangle {
+  height: max-content;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 1px 4px 4px 1px rgba(85, 85, 85, 0.25);
+}
+.img-avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.author {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+.data {
+  text-align: start;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.data p:nth-child(1) {
+  font-weight: bold;
+  color: blue;
+}
+.data p:nth-child(2) {
+  font-weight: bold;
+  font-size: 20px;
+  color: crimson;
+}
+.data p:nth-child(3) {
+  color: gray;
+}
+
+.img {
+  height: 400px;
+  width: 100%;
+}
+.container h2 {
+  text-align: start;
+  margin: 1rem 0;
+}
+.content {
+  text-align: start;
+}
+
+.list {
+  text-align: start;
+}
+.list li a {
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.list li {
+  transition: 0.3s all;
+}
+.list li:hover {
+  transform: scale(1.1);
+}
+.list li a:hover {
+  color: crimson;
+}
+.about,
+.archieves,
+.elsewhere {
+  margin: 20px 0;
+}
+/*================ End of the Body =================*/
+
+
+/*================= Start of Footer ================= */
+.footer{
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: var(--navBarColor);
+    color: var(--udacityColor);
+    text-align: center;
+}  
+.footer h2::before{
+    content: '\00a9';
+    
+}
+
+/*================= End of Footer ================= */
+
+
+
+
+/*================ Responsive Code ================ */
+
+
+@media (max-width:858px){
+  
+    .container{
+        grid:
+        "back" 
+        "title"
+        "search"
+        "blogBody" 
+        "sideBar"
+        "footer"; 
+    }
+   
+
+  
+   
+    
+}
